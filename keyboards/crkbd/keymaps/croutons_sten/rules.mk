@@ -1,0 +1,9 @@
+MOUSEKEY_ENABLE = no    # Mouse keys
+RGBLIGHT_ENABLE = yes    # Enable WS2812 RGB underlight.
+OLED_ENABLE     = no
+#OLED_DRIVER     = SSD1306
+LTO_ENABLE      = yes
+COMMAND_ENABLE   = no  # Commands for debug and configuration
+UNICODE_ENABLE   = no  # Unicode
+SWAP_HANDS_ENABLE= no  # Allow swapping hands of keyboard
+STENO_ENABLE = yes

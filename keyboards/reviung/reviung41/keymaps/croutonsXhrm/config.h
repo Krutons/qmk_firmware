@@ -1,0 +1,19 @@
+#pragma once
+
+#define USE_BABBLEPASTE
+#define BABL_WINDOWS
+#define BABL_MAC
+
+#define BABL_OSKEYS
+#define BABL_APP
+#define BABL_MOVE
+
+#define COMBO_COUNT 25
+
+#define TAPPING_TERM 200
+#define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_FORCE_HOLD
+#define ONESHOT_TIMEOUT 3000
+
+#define LEADER_TIMEOUT 450
+#define LEADER_PER_KEY_TIMING
