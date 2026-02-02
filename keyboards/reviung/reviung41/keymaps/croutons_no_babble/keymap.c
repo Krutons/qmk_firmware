@@ -287,7 +287,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 if (win_mode == true) {
                     SEND_STRING("" SS_LCTL(SS_TAP(X_BSPC)));
                 } else {
-                    SEND_STRING("" SS_LGUI(SS_TAP(X_BSPC)));
+                    SEND_STRING("" SS_LALT(SS_TAP(X_BSPC)));
                 }
             }
             break;
