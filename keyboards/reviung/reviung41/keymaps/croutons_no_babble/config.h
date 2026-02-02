@@ -1,4 +1,13 @@
 #pragma once
+#define MK_3_SPEED
+#define MK_MOMENTARY_ACCEL
+
+#ifndef NO_DEBUG
+    #define NO_DEBUG
+#endif // !NO_DEBUG
+#if !defined(NO_PRINT) && !defined(CONSOLE_ENABLE)
+    #define NO_PRINT
+#endif // !NO_PRINT
 
 #define USE_BABBLEPASTE
 #define BABL_WINDOWS
@@ -8,10 +17,8 @@
 #define BABL_APP
 #define BABL_MOVE
 
-#define COMBO_COUNT 25
-
+#define COMBO_COUNT 22
 #define TAPPING_TERM 200
-#define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_FORCE_HOLD
 #define ONESHOT_TIMEOUT 3000
 

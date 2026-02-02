@@ -3,6 +3,7 @@
 // TODO: Replace babblepaste with own macro system
 // TODO: Add META/MEH key
 // TODO: Find more unused keys in layers and make useful
+#include "users/secrets/secret.h"
 #include QMK_KEYBOARD_H
 #include "quantum.h"
 #include <stdio.h>
@@ -299,23 +300,23 @@ void leader_end_user(void) {
     }
     else if (leader_sequence_one_key(KC_Q))
     {
-        SEND_STRING("");
+        SEND_STRING(SECRET_5);
     }
     else if (leader_sequence_two_keys(KC_D, KC_F))
     {
-        SEND_STRING("");
+        SEND_STRING(SECRET_4);
     }
     else if (leader_sequence_two_keys(KC_C, KC_G))
     {
-        SEND_STRING("");
+        SEND_STRING(SECRET_3);
     }
     else if (leader_sequence_three_keys(KC_G, KC_U, KC_Y))
     {
-        SEND_STRING("");
+        SEND_STRING(SECRET_2);
     }
     else if (leader_sequence_three_keys(KC_S, KC_A, KC_T))
     {
-        SEND_STRING("");
+        SEND_STRING(SECRET_1);
     }
     is_leader = false;
     caps_light_set();
