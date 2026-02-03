@@ -505,8 +505,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_FUNC] = LAYOUT_reviung41(
     XXXXXXX,XXXXXXX,MEH(KC_LEFT),KC_HYPR,MEH(KC_RIGHT),QK_BOOT,         QK_BOOT,   KC_F7,   KC_F8,   KC_F9,  KC_F12, XXXXXXX,
-    XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, XXXXXXX,               C(KC_EQL), KC_F1,   KC_F2,   KC_F3,  KC_F11, XXXXXXX,
-    TO_WIN,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,              C(KC_MINS), KC_F4,   KC_F5,   KC_F6,  KC_F10, TO_MAC,
+    XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, XXXXXXX,                   ZIN,   KC_F1,   KC_F2,   KC_F3,  KC_F11, XXXXXXX,
+    TO_WIN,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                 ZOUT,   KC_F4,   KC_F5,   KC_F6,  KC_F10, TO_MAC,
                                         Num,   KC_LSFT,  KC_ENT,  KC_SPACE,   Num
   ),
 };

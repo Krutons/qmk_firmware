@@ -541,11 +541,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_NAV] = LAYOUT_split_3x6_3(
       // Navigation - 5
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      KC_TAB,KC_F12,C(KC_LEFT),KC_HOME,C(KC_RGHT),A(KC_UP),                     KC_VOLU, KC_HOME,   KC_UP,  KC_END,  SCAP, KC_BSPC,
+      KC_TAB,KC_F12,C(KC_LEFT),KC_HOME,C(KC_RGHT),A(KC_UP),                     KC_VOLU, KC_HOME,   KC_UP,  KC_END,    SCAP,  KC_DEL,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, KC_LSFT, KC_LCTL,KC_LALT,KC_LGUI,A(KC_DOWN),                      KC_VOLD, KC_LEFT, KC_DOWN, KC_RGHT, KC_BRIU,  KC_DEL,
+      _______, KC_LSFT, KC_LCTL,KC_LALT,KC_LGUI,A(KC_DOWN),                      KC_VOLD, KC_LEFT, KC_DOWN, KC_RGHT, KC_BRIU, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     MS_BTN1,A(KC_TAB),LCS(KC_TAB),KC_END,C(KC_TAB),KC_MPLY,                   RUNAPP, KC_PGUP,C(KC_ENT),KC_PGDN, KC_BRID, XXXXXXX,
+     MS_BTN1,A(KC_TAB),LCS(KC_TAB),KC_END,C(KC_TAB),KC_MPLY,                     RUNAPP,  KC_PGUP, C(KC_ENT),KC_PGDN, KC_BRID, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                               Nav, KC_LSFT,  KC_ENT,     KC_ENT,KC_SPACE,   Sym
                                       //`--------------------------'  `--------------------------'
@@ -554,11 +554,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_SYM] = LAYOUT_split_3x6_3(
         // Symbols - 6
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_TAB, S(KC_1),S(KC_LBRC),KC_LBRC,S(KC_9),KC_TILD,                      S(KC_6),S(KC_0),KC_RBRC, S(KC_RBRC),KC_GRAVE, XXXXXXX,
+       KC_TAB, S(KC_1),S(KC_LBRC),KC_LBRC,S(KC_9), XXXXXXX,                      S(KC_6),S(KC_0),KC_RBRC, S(KC_RBRC),KC_GRAVE, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______,   KC_AT, S(KC_8),  KC_EQL, S(KC_9), S(KC_4),                      KC_NUHS, KC_RGUI, KC_LALT, KC_RCTL, KC_RSFT, KC_DQUO,
+      KC_BSPC,   KC_AT, S(KC_8),  KC_EQL, S(KC_4), KC_TILD,                      KC_NUHS, KC_RGUI, KC_LALT, KC_RCTL, KC_RSFT, KC_DQUO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     A(KC_3),S(KC_7),S(KC_BSLS),S(KC_EQL),S(KC_0),S(KC_5),                      S(KC_3),KC_NUBS,S(KC_NUBS),S(KC_SCLN),KC_NUBS,KC_BSLS,
+     A(KC_3),S(KC_7),S(KC_BSLS),S(KC_EQL),S(KC_5), XXXXXXX,                      S(KC_3),KC_NUBS,S(KC_NUBS),S(KC_SCLN),KC_NUBS,KC_BSLS,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                               Nav, KC_LSFT,  KC_ENT,     KC_ENT,KC_SPACE,   Sym
                                       //`--------------------------'  `--------------------------'
@@ -569,9 +569,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
     XXXXXXX,XXXXXXX,MEH(KC_LEFT),KC_HYPR,MEH(KC_RIGHT),QK_BOOT,                  QK_BOOT,   KC_F7,   KC_F8,   KC_F9,  KC_F12, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,  XXXXXXX,                 LCS(KC_EQL),   KC_F1,   KC_F2,   KC_F3,  KC_F11, XXXXXXX,
+      XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,  XXXXXXX,                         ZIN,   KC_F1,   KC_F2,   KC_F3,  KC_F11, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-       TO_WIN, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   C(KC_MINS),   KC_F4,   KC_F5,   KC_F6,  KC_F10,  TO_MAC,
+       TO_WIN, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                         ZOUT,   KC_F4,   KC_F5,   KC_F6,  KC_F10,  TO_MAC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                               Num, KC_LSFT,  KC_ENT,     KC_ENT,KC_SPACE,   Num
                                       //`--------------------------'  `--------------------------'
