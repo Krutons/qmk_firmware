@@ -514,9 +514,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_FPADPLUS] = LAYOUT_split_3x6_3(
       // Fastpad+ - 3
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_ESC,KC_F12,C(KC_LEFT), KC_UP,C(KC_RIGHT),MS_WHLD,                    KC_SLSH,    KC_7,    KC_8,    KC_9, KC_MINS, KC_BSPC,
+       KC_ESC,KC_F12,C(KC_LEFT), KC_UP,C(KC_RIGHT),   WHLU,                    KC_SLSH,    KC_7,    KC_8,    KC_9, KC_MINS, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, DblClik, KC_LEFT,KC_DOWN, KC_RIGHT, MS_WHLU,                    S(KC_8),    KC_1,    KC_2,    KC_3,S(KC_EQL), KC_DOT,
+      _______, DblClik, KC_LEFT,KC_DOWN, KC_RIGHT,    WHLD,                    S(KC_8),    KC_1,    KC_2,    KC_3,S(KC_EQL), KC_DOT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       MS_BTN1, XXXXXXX,LCS(KC_TAB),XXXXXXX,C(KC_TAB),XXXXXXX,                      KC_EQL,    KC_4,    KC_5,    KC_6,KC_COMM,S(KC_SCLN),
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
