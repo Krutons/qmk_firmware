@@ -1,3 +1,4 @@
+BOOTLOADER = caterina
 LTO_ENABLE = yes
 COMBO_ENABLE = yes
 LEADER_ENABLE = yes

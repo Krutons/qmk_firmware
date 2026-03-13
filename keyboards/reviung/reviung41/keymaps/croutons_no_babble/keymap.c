@@ -26,7 +26,9 @@ enum keycodes {
     SCAP,
     RUNAPP,
     WHLU,
-    WHLD
+    WHLD,
+    WS_LEFT,
+    WS_RIGHT
 };
 
 enum layer_names {
@@ -314,6 +316,34 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
             }
             break;
+        case WS_LEFT: // Workspace left
+            if (record->event.pressed) {
+                if (win_mode == true) {
+                    SEND_STRING(SS_DOWN(X_LCTL));
+                    SEND_STRING(SS_DOWN(X_LGUI));
+                    SEND_STRING(SS_TAP(X_LEFT));
+                    SEND_STRING(SS_UP(X_LCTL));
+                    SEND_STRING(SS_UP(X_LGUI));
+
+                } else {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_LEFT)));
+                }
+            }
+            break;
+        case WS_RIGHT: // Workspace right
+            if (record->event.pressed) {
+                if (win_mode == true) {
+                    SEND_STRING(SS_DOWN(X_LCTL));
+                    SEND_STRING(SS_DOWN(X_LGUI));
+                    SEND_STRING(SS_TAP(X_RIGHT));
+                    SEND_STRING(SS_UP(X_LCTL));
+                    SEND_STRING(SS_UP(X_LGUI));
+
+                } else {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_RIGHT)));
+                }
+            }
+            break;
         case WHLU:                        // Mouse wheel "up"
             if (record->tap.count == 0) { // Key is being held.
                 if (record->event.pressed) {
@@ -448,7 +478,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     */
 
   [_FPADPLUS] = LAYOUT_reviung41(
-    KC_ESC,   KC_F12, C(KC_LEFT), KC_UP,   C(KC_RIGHT), WHLU,      KC_SLSH, KC_7, KC_8, KC_9, KC_MINS,   KC_BSPC,
+    KC_ESC,   KC_F12, WS_LEFT, KC_UP, WS_RIGHT, WHLU,      KC_SLSH, KC_7, KC_8, KC_9, KC_MINS,   KC_BSPC,
     KC_BSPC, DblClik, KC_LEFT,    KC_DOWN, KC_RIGHT,    WHLD,      S(KC_8), KC_1, KC_2, KC_3, S(KC_EQL), KC_DOT,
     MS_BTN1, XXXXXXX, LCS(KC_TAB), KC_HYPR,  C(KC_TAB), XXXXXXX,      KC_EQL,  KC_4, KC_5, KC_6, KC_COMM,   S(KC_SCLN),
                                                 Nav,   KC_LSFT,   Quickbar,    KC_0,    Sym
@@ -466,7 +496,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     *                             +-------------/         \-------------+
     */
   [_NAV] = LAYOUT_reviung41(
-    KC_TAB,  KC_F12,  C(KC_LEFT),   KC_HOME, C(KC_RIGHT), A(KC_UP),       KC_VOLU,  KC_HOME, KC_UP,     KC_END,   SCAP,  KC_DEL,
+    KC_TAB,  KC_F12,  WS_LEFT,   KC_HOME, WS_RIGHT, A(KC_UP),       KC_VOLU,  KC_HOME, KC_UP,     KC_END,   SCAP,  KC_DEL,
     KC_BSPC, KC_LSFT, KC_LCTL,      KC_LALT, KC_LGUI,     A(KC_DOWN),     KC_VOLD,  KC_LEFT, KC_DOWN,   KC_RIGHT, KC_BRIU, XXXXXXX,
     MS_BTN1, A(KC_TAB), LCS(KC_TAB), KC_END,  C(KC_TAB),   KC_MPLY,       RUNAPP, KC_PGUP, C(KC_ENT), KC_PGDN,  KC_BRID, XXXXXXX,
                                                   Nav,   KC_LSFT,   KC_ENT,    KC_SPACE,    Sym
